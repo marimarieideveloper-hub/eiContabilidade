@@ -32,7 +32,7 @@
 
 body{
     
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 
     color: var(--texto);
     background-color: #EEEE;
@@ -40,17 +40,26 @@ body{
     min-height: 100vh;
 }
 
+    h1, h2, h3,
+        .logo,
+        button,
+        summary {
+            font-family: 'Poppins', sans-serif;
+    }
+
 /* HEADER */
 
 header{
 
     width: 100%;
-    background-color: var(--branco);
+    background-color: var(--azul-claro);
     padding: 15px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow:0 2px 10px var(--sombra);
+
+    color: var(--branco);
 }
 
 /* LOGOTIPO */
@@ -60,11 +69,10 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--texto);
+    color: var(--branco);
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: bold;
-
 }
 
 .logo img {
@@ -72,7 +80,6 @@ header{
     width: 45px;
     height: 45px;
     object-fit: contain;
-
 }
 
 /*  6. NAVEGAÇÃO */
@@ -82,25 +89,24 @@ nav {
     display: flex;
     align-items: center;
     gap: 15px;
-
 }
 
 nav a {
 
-    color: var(--texto);
+    color: var(--branco);
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 8px;
     transition: 0.3s;
-
 }
 
 nav a:hover {
 
+    background-color: rgba(255, 255, 255, 0.15);
+/*
     background-color: var(--cinza-claro);
-    color: var(--azul-claro);
-
+    color: var(--azul-claro);*/
 }
 
 /* BOTÃO DO MENU */
@@ -109,7 +115,7 @@ nav button {
 
     border: none;
     background-color: transparent;
-    color: var(--texto);
+    color: var(--branco);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 5px;
@@ -120,9 +126,9 @@ nav button {
 
 main {
 
-    width: 90%;
+    width: 95%;
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 0 auto;
 
 }
 
@@ -131,11 +137,20 @@ main {
 .hero {
 
     background-color: var(--branco);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    /*
+    background-color: var(--branco);
     padding: 60px 30px;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 15px var(--sombra);
     margin-bottom: 25px;
+    */
 
 }
 
@@ -385,25 +400,102 @@ summary::-webkit-details-marker {
     margin-bottom: 25px;
 }
 
+/* =====================================================
+   FORMULÁRIOS DO FEEDBACK
+===================================================== */
+
+.feedback form {
+    max-width: 650px;
+    margin: 25px auto 0;
+    text-align: left;
+}
+
+/* FEEDBACK fieldset */
+.feedback fieldset {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.feedback legend {
+    color: var(--texto);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.feedback fieldset label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.feedback fieldset input {
+    margin-right: 8px;
+}
+
+/* Campo */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.campo label span {
+     font-weight: normal;
+    color: var(--texto-claro);
+    font-size: 0.9rem;
+}
+
+/* INPUT E TEXTAREA */
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* QUANDO O USUÁRIO CLICA NO CAMPO */
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--azul-escuro);
+    box-shadow: 0 0 0 2px rgba(29, 82, 242, 0.1);
+}
+
+
+
 /* BOTÕES DE FEEDBACK */
 
-.feedback a {
-
-    display: inline-block;
-    text-decoration: none;
-    color: var(--texto);
-    border: 2px solid var(--branco);
-    padding: 10px 18px;
-    margin: 5px;
+.feedback form button {
+    width: 100%;
+    border: none;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 13px;
     border-radius: 8px;
+    font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.feedback a:hover {
-
-    background-color: var(--azul-escuro);
-    color: var(--branco);
+.feedback form button:hover {
+    background-color: var(--azul-claro);
 }
 
 /* FOOTER */
@@ -470,7 +562,7 @@ img {
 
     main {
         width: 94%;
-        margin: 20px auto;
+        margin: 0 auto;
     }
 
 
@@ -528,6 +620,18 @@ img {
         margin: 10px auto;
     }
 
+    .feedback form {
+    width: 100%;
+}
+
+    .feedback fieldset {
+        padding: 15px;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 16px;
+    }
 
     /* FOOTER */
 

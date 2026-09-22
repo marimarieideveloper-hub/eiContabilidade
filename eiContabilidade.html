@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Site EIContabilidade</title>
+    <title> EIContabilidade </title>
 
-    <link rel="stylesheet" href="eistyles.css">
+    <link rel="shortcut icon" href="./imagens/eicontabilidade ico.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style_principal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -14,8 +21,8 @@
     <header>
 
         <div class="logo">
-            <img src="imagens/logo.png" alt="EI Contabilidade">
-            <span>eiContabilidade</span>
+            <img src="imagens/logo.png" alt="logo de eiContabilidade">
+            <span>EIContabilidade</span>
         </div>
         
         <nav>
@@ -130,26 +137,80 @@
     </section>
 
     <section class="feedback">
-        <h2>
-            Ajude-nos a melhorar
-        </h2>
+        <h2> Ajude-nos a melhorar </h2>
 
-        <p>
-            Encontrou um problema ou tem uma sugestão?
-        </p>
+        <form action="#" method="post">
+                    
+            <!-- Tipo de feedback -->
+            <fieldset>
+                
+                <legend>Que tipo de feedback deseja enviar?</legend>
 
-        <a href="#">
-            🐞Reportar problema
-        </a>
+                <label>
+                    <input type="radio"
+                           name="tipo-feedback"
+                           value="problema"
+                           required >
+                🐞Reportar problema
+               </label>
+
+               <label>
+                    <input type="radio"
+                           name="tipo-feedback"
+                           value="💡Sugerir">
+                💡Sugerir melhorias
+               </label>
+                 
+               <label>
+                    <input type="radio"
+                           name="tipo-feedback"
+                           value="💬Outro">
+                           
+                💬Outro feedback
+               </label>
+                
+            </fieldset>
         
-        <a href="#">
-            💡Sugerir melhorias
-        </a>
+            <!-- Descrição -->
+            <div class="campo">
+                <label for="mensagem">
+                    Conte-nos mais:
+                </label>
 
-        <a href="#">
-            💬Outro feedback
-        </a>
-    </section>
+                <textarea 
+                    id="mensagemid"
+                    name="mensagem"
+                    rows="6"
+                    placeholder="Escreva aqui o seu feedback"
+                    required>
+                </textarea>
+
+            </div>
+
+            <!-- Email -->
+        <div class="campo">
+
+            <label for="email">
+                Seu email <span>(opcional)</span>
+            </label>
+
+            <input 
+                type="email"
+                id="email"
+                name="email"
+                placeholder="exemplo@email.com"
+            >
+
+        </div>
+            
+        <!-- Enviar -->
+            <button type="submit">
+                Enviar feedback
+            </button>
+
+        </form>
+        
+       </section>
 </main>
 
     <footer>

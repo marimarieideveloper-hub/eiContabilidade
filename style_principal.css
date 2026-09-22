@@ -1,0 +1,647 @@
+@charset "UTF-8";
+
+/*
+ Cores e Configurações gerais
+*/
+
+:root {
+    --azul-escuro:#1D52F2;
+    --azul:#1B63F2;
+    --azul-medio:#1B78F2;
+    --azul-claro:#168BF2;
+    --cinza-claro:#F2F2F2;
+
+    --branco:#FFFFFF;
+    --texto:#333333;
+    --texto-claro:#666666;
+    --cinzeto-claro: #EEE;
+    --cinzeto-medio: #E5E5E5;
+
+    --sombra:rgba(0, 0, 0, 0.15);
+}
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    
+    font-family: 'Inter', sans-serif;
+
+    color: var(--texto);
+    background-color: #EEEE;
+
+    min-height: 100vh;
+}
+
+    h1, h2, h3,
+        .logo,
+        button,
+        summary {
+            font-family: 'Poppins', sans-serif;
+    }
+
+/* HEADER */
+
+header{
+
+    width: 100%;
+    background-color: var(--azul-claro);
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:0 2px 10px var(--sombra);
+
+    color: var(--branco);
+}
+
+/* LOGOTIPO */
+
+.logo {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo img {
+    
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/*  6. NAVEGAÇÃO */
+
+nav {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+
+    background-color: rgba(255, 255, 255, 0.15);
+/*
+    background-color: var(--cinza-claro);
+    color: var(--azul-claro);*/
+}
+
+/* BOTÃO DO MENU */
+
+nav button {
+
+    border: none;
+    background-color: transparent;
+    color: var(--branco);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+/* MAIN */
+
+main {
+
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+/* HERO */
+
+.hero {
+
+    background-color: var(--branco);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    /*
+    background-color: var(--branco);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--sombra);
+    margin-bottom: 25px;
+    */
+
+}
+
+.hero h1 {
+
+    color: var(--texto);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+
+}
+
+.hero p {
+
+    color: var(--texto-claro);
+    font-size: 1.1rem;
+    line-height: 1.6;
+
+}
+
+/* SEÇÃO DE DISCIPLINAS */
+
+.disciplinas {
+
+    background-color: var(--branco);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px var(--sombra);
+    margin-bottom: 25px;
+
+}
+
+/* SUMMARY */
+
+summary {
+
+    cursor: pointer;
+    color: var(--texto);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--cinza-claro);
+
+}
+
+summary:hover {
+
+    background-color: #e6e6e6;
+}
+
+/* Remove a seta padrão do navegador */
+
+summary::-webkit-details-marker {
+
+    display: none;
+}
+
+/* LISTA DE DISCIPLINAS */
+
+.lista-disciplinas {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+
+}
+
+.lista-disciplinas a {
+
+    text-decoration: none;
+    color: var(--texto);
+    background-color: var(--cinza-claro);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--azul-claro);
+    transition: 0.3s;
+
+}
+
+.lista-disciplinas a:hover {
+
+    background-color: var(--azul-claro);
+    color: var(--branco);
+    transform: translateX(5px);
+
+}
+
+/* CAIXA DA INTELIGÊNCIA ARTIFICIAL */
+
+.ia {
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-claro),
+        var(--azul-medio)
+    );
+    color: var(--branco);
+    padding: 40px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px var(--sombra);
+}
+
+.ia h2 {
+
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+}
+
+.ia p {
+
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+/* BOTÃO DA IA */
+
+.botao {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+
+    background-color: var(--cinza-claro);
+    transform: translateX(5px);
+}
+
+/* YOUTUBE */
+
+.youtube {
+
+    background-color: var(--branco);
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--sombra);
+    margin-bottom: 25px;
+}
+
+.youtube h2 {
+
+    color: var(--texto);
+    margin-bottom: 15px;
+}
+
+.youtube p {
+
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.youtube a {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 45px;
+    border: 2px solid var(--branco);
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.youtube a:hover {
+
+    background-color: var(--azul-claro);
+    transform: scale(1.05);
+}
+
+/* REDES SOCIAIS */
+
+.redes {
+
+    background-color: var(--branco);
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--sombra);
+    margin-bottom: 25px;
+}
+
+.redes h2 {
+
+    color: var(--texto);
+    margin-bottom: 20px;
+}
+
+.redes a {
+
+    display: inline-block;
+    text-decoration: none;
+    color: var(--texto);
+    border: 2px solid var(--branco);
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+
+    background-color: var(--azul-claro);
+    transform: translateY(-3px);
+}
+
+/* FEEDBACK */
+
+.feedback {
+
+    background-color: var(--branco);
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--sombra);
+    margin-bottom: 25px;
+}
+
+.feedback h2 {
+
+    color: var(--texto);
+    margin-bottom: 15px;
+}
+
+.feedback p {
+
+    color: var(--texto-claro);
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   FORMULÁRIOS DO FEEDBACK
+===================================================== */
+
+.feedback form {
+    max-width: 650px;
+    margin: 25px auto 0;
+    text-align: left;
+}
+
+/* FEEDBACK fieldset */
+.feedback fieldset {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.feedback legend {
+    color: var(--texto);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.feedback fieldset label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.feedback fieldset input {
+    margin-right: 8px;
+}
+
+/* Campo */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.campo label span {
+     font-weight: normal;
+    color: var(--texto-claro);
+    font-size: 0.9rem;
+}
+
+/* INPUT E TEXTAREA */
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* QUANDO O USUÁRIO CLICA NO CAMPO */
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--azul-escuro);
+    box-shadow: 0 0 0 2px rgba(29, 82, 242, 0.1);
+}
+
+
+
+/* BOTÕES DE FEEDBACK */
+
+.feedback form button {
+    width: 100%;
+    border: none;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback form button:hover {
+    background-color: var(--azul-claro);
+}
+
+/* FOOTER */
+
+footer {
+
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    header {
+        padding: 12px 15px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        gap: 6px;
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /* NAVEGAÇÃO */
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 5px;
+        font-size: 0.85rem;
+    }
+
+
+    /* MAIN */
+
+    main {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+
+    /* CAIXAS */
+
+    .ia,
+    .youtube,
+    .redes,
+    .feedback,
+    .disciplinas {
+        padding: 25px 18px;
+    }
+
+
+    /* TÍTULOS */
+
+    .ia h2,
+    .youtube h2,
+    .redes h2,
+    .feedback h2 {
+        font-size: 1.4rem;
+    }
+
+
+    /* DEPOIMENTOS */
+
+    .depoimento {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* FEEDBACK */
+
+    .feedback a,
+    .redes a {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 10px auto;
+    }
+
+    .feedback form {
+    width: 100%;
+}
+
+    .feedback fieldset {
+        padding: 15px;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 15px;
+    }
+
+}
+
+
+
+
+

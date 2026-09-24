@@ -11,6 +11,7 @@
     --azul-claro:#168BF2;
     --cinza-claro:#F2F2F2;
 
+    --preto:#000000;
     --branco:#FFFFFF;
     --texto:#333333;
     --texto-claro:#666666;
@@ -34,7 +35,7 @@ body{
     
     font-family: 'Inter', sans-serif;
 
-    color: var(--texto);
+    color: var(--preto);
     background-color: #EEEE;
 
     min-height: 100vh;
@@ -156,7 +157,7 @@ main {
 
 .hero h1 {
 
-    color: var(--texto);
+    color: var(--preto);
     font-size: 2.5rem;
     margin-bottom: 15px;
 
@@ -164,7 +165,7 @@ main {
 
 .hero p {
 
-    color: var(--texto-claro);
+    color: var(--texto);
     font-size: 1.1rem;
     line-height: 1.6;
 
@@ -187,7 +188,7 @@ main {
 summary {
 
     cursor: pointer;
-    color: var(--texto);
+    color: var(--preto);
     font-size: 1.2rem;
     font-weight: bold;
     padding: 15px;
@@ -306,13 +307,13 @@ summary::-webkit-details-marker {
 
 .youtube h2 {
 
-    color: var(--texto);
+    color: var(--preto);
     margin-bottom: 15px;
 }
 
 .youtube p {
 
-    color: var(--texto-claro);
+    color: var(--texto);
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -353,7 +354,7 @@ summary::-webkit-details-marker {
 
 .redes h2 {
 
-    color: var(--texto);
+    color: var(--preto);
     margin-bottom: 20px;
 }
 
@@ -390,13 +391,13 @@ summary::-webkit-details-marker {
 
 .feedback h2 {
 
-    color: var(--texto);
+    color: var(--preto);
     margin-bottom: 15px;
 }
 
 .feedback p {
 
-    color: var(--texto-claro);
+    color: var(--texto);
     margin-bottom: 25px;
 }
 
@@ -419,7 +420,7 @@ summary::-webkit-details-marker {
 }
 
 .feedback legend {
-    color: var(--texto);
+    color: var(--preto);
     font-weight: bold;
     padding: 0 8px;
 }
@@ -443,12 +444,12 @@ summary::-webkit-details-marker {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: var(--texto);
+    color: var(--preto);
 }
 
 .campo label span {
      font-weight: normal;
-    color: var(--texto-claro);
+    color: var(--texto);
     font-size: 0.9rem;
 }
 

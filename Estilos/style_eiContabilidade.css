@@ -12,6 +12,7 @@
     --cinza-claro:#F2F2F2;
 
     --preto:#000000;
+    --preto-suave: #1a1a1a;
     --branco:#FFFFFF;
     --texto:#333333;
     --texto-claro:#666666;
@@ -39,6 +40,7 @@ body{
     background-color: #EEEE;
 
     min-height: 100vh;
+   
 }
 
     h1, h2, h3,
@@ -105,9 +107,11 @@ nav a {
 nav a:hover {
 
     background-color: rgba(255, 255, 255, 0.15);
-/*
-    background-color: var(--cinza-claro);
-    color: var(--azul-claro);*/
+
+}
+
+nav i {
+    font-size: 18px;
 }
 
 /* BOTÃO DO MENU */
@@ -144,15 +148,6 @@ main {
     text-align: center;
     margin-bottom: 25px;
 
-    /*
-    background-color: var(--branco);
-    padding: 60px 30px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px var(--sombra);
-    margin-bottom: 25px;
-    */
-
 }
 
 .hero h1 {
@@ -165,7 +160,7 @@ main {
 
 .hero p {
 
-    color: var(--texto);
+    color: var(--preto);
     font-size: 1.1rem;
     line-height: 1.6;
 
@@ -313,7 +308,7 @@ summary::-webkit-details-marker {
 
 .youtube p {
 
-    color: var(--texto);
+    color: var(--preto-suave);
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -397,7 +392,7 @@ summary::-webkit-details-marker {
 
 .feedback p {
 
-    color: var(--texto);
+    color: var(--preto-suave);
     margin-bottom: 25px;
 }
 
@@ -449,7 +444,7 @@ summary::-webkit-details-marker {
 
 .campo label span {
      font-weight: normal;
-    color: var(--texto);
+    color: var(--preto-suave);
     font-size: 0.9rem;
 }
 
@@ -515,24 +510,22 @@ footer p {
     margin: 5px 0;
 }
 
-/* =====================================================
-   RESPONSIVIDADE
-===================================================== */
-
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* =====================================================
+   MEDIA QUERY"S
+===================================================== */
 
 @media (max-width: 700px) {
 
     /* HEADER */
 
     header {
-        padding: 12px 15px;
+        padding: 10px 15px;
     }
-
 
     /* LOGO */
 
@@ -546,18 +539,36 @@ img {
         height: 35px;
     }
 
-
-    /* NAVEGAÇÃO */
+    /* Esconder elementos secundários no celular */
 
     nav {
-        gap: 3px;
+        display: flex;
+        align-items: center;
+        gap: 2px;
     }
 
-    nav a {
+    nav i {
+    font-size: 18px;
+    }
+    
+    nav .menu-pc {
+        display: none;
+    }
+
+    nav a[href="sobre_EI.html"] {
+        display: none;
+    }
+
+    nav button {
+
+        display: block;
+        border: none;
+        background: transparent;
+        color: var(--branco);
+        font-size: 1.6rem;
+        cursor: pointer;
         padding: 5px;
-        font-size: 0.85rem;
     }
-
 
     /* MAIN */
 
@@ -565,7 +576,6 @@ img {
         width: 94%;
         margin: 0 auto;
     }
-
 
     /* HERO */
 
@@ -583,7 +593,6 @@ img {
 
 
     /* CAIXAS */
-
     .ia,
     .youtube,
     .redes,
@@ -591,7 +600,6 @@ img {
     .disciplinas {
         padding: 25px 18px;
     }
-
 
     /* TÍTULOS */
 
@@ -602,14 +610,12 @@ img {
         font-size: 1.4rem;
     }
 
-
     /* DEPOIMENTOS */
 
     .depoimento {
         width: 100%;
         max-width: 100%;
     }
-
 
     /* FEEDBACK */
 

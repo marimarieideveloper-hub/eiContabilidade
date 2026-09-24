@@ -548,14 +548,10 @@ img {
     }
 
     nav i {
-    font-size: 18px;
+    font-size: 13px;
     }
     
     nav .menu-pc {
-        display: none;
-    }
-
-    nav a[href="sobre_EI.html"] {
         display: none;
     }
 

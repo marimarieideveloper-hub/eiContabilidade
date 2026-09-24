@@ -278,11 +278,11 @@ footer p {
         gap: 2px;
     }
 
-    nav .menu-pc {
-        display: none;
+    nav i {
+        font-size: 13px;
     }
 
-    nav a[href="sobre_EI.html"] {
+    nav .menu-pc {
         display: none;
     }
 

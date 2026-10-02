@@ -284,6 +284,7 @@ footer p {
 
     nav .menu-pc {
         display: none;
+        text-size-adjust: 1px;
     }
 
     nav button {

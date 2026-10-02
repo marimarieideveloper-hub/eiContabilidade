@@ -113,31 +113,44 @@ main {
     flex: 1;
 }
 
-/* =====================================
+/* ==================================================
    PÁGINA SOBRE
-===================================== */
+================================================== */
 
 .sobre-container {
-
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
+
     display: grid;
     grid-template-columns: 0.85fr 1.15fr;
     gap: 30px;
+
     align-items: start;
 }
 
 
-.sobre-introducao {
+/* ==================================================
+   FICHA ESQUERDA
+================================================== */
 
+.sobre-introducao {
     position: sticky;
     top: 30px;
-    align-self: self-start;
+    align-self: start;
 }
 
-.sobre-logo {
 
+.sobre-ficha {
+    background-color: var(--branco);
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--sombra);
+    text-align: center;
+}
+
+
+.sobre-imagem {
     width: 130px;
     height: 130px;
 
@@ -146,95 +159,313 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.sobre-logo img {
 
+.sobre-imagem img {
     width: 100%;
     height: 100%;
 
     object-fit: contain;
 }
 
-.sobre-ficha {
-
-    background-color: var(--branco);
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px var(--sombra);
-    text-align: center;
-}
 
 .sobre-ficha h1 {
-    
-    color: var(--preto);
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2rem;
+
+    color: var(--preto);
+
+    font-size: 2.1rem;
+
     line-height: 1.2;
+
     margin-bottom: 20px;
 }
 
-.sobre-ficha p {
 
+.sobre-ficha p {
     color: var(--preto-suave);
     line-height: 1.7;
     margin-bottom: 15px;
 }
 
-.detalhes {
 
+/* Destaque da ficha */
+
+.ficha-destaque {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--cinza-claro);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+
+.ficha-destaque span {
+    color: var(--azul);
+    font-size: 20px;
+}
+
+
+.ficha-destaque p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   ÁREA DOS DETAILS
+================================================== */
+
+.sobre-informacoes {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 
-.detalhes details {
-
+.sobre-informacoes details {
     background-color: var(--branco);
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--sombra);
     overflow: hidden;
 }
 
-.detalhes summary {
 
+/* ==================================================
+   SUMMARY
+================================================== */
+
+.sobre-informacoes summary {
     padding: 20px;
     cursor: pointer;
+    list-style: none;
     color: var(--preto);
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 1.05rem;
-    background-color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.detalhes summary:hover {
-    background-color: #e6e6e6;
+
+/* Remove marcador padrão */
+
+.sobre-informacoes summary::-webkit-details-marker {
+    display: none;
 }
 
-.conteudo-detalhes {
 
-    padding: 0 20px 20px 20px;
+/* Ícone antes do texto */
+
+.sobre-informacoes summary span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.sobre-informacoes summary i {
+    color: var(--azul);
+
+    width: 20px;
+
+    text-align: center;
+}
+
+
+/* Seta */
+
+.sobre-informacoes summary::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+
+.sobre-informacoes details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+
+.sobre-informacoes summary:hover {
+    background-color: var(--cinza-claro);
+}
+
+
+/* ==================================================
+   CONTEÚDO DOS DETAILS
+================================================== */
+
+.conteudo-details {
+    padding: 5px 25px 25px;
+
     color: var(--preto-suave);
-    line-height: 1.6;
+
+    line-height: 1.7;
 }
 
-.conteudo-detalhes p {
 
+.conteudo-details p {
     margin-bottom: 15px;
 }
 
-.conteudo-detalhes ul {
 
-    padding-left: 20px;
+.conteudo-details ul {
+    padding-left: 25px;
+
+    margin-bottom: 20px;
 }
 
-.conteudo-detalhes li {
 
-    margin-bottom: 10px;
+.conteudo-details li {
+    margin-bottom: 8px;
 }
 
-/* FOOTER */
+
+/* ==================================================
+   ARTIGOS DENTRO DOS DETAILS
+================================================== */
+
+.conteudo-details article {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.conteudo-details article:last-child {
+    border-bottom: none;
+}
+
+
+.conteudo-details article h3 {
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--preto);
+
+    font-size: 1rem;
+
+    margin-bottom: 8px;
+
+    line-height: 1.4;
+}
+
+.conteudo-details article h3 i {
+    color: var(--azul);
+
+    margin-right: 8px;
+}
+
+/* ==================================================
+   NOTA DA PESQUISA
+================================================== */
+
+.nota-pesquisa {
+    padding: 12px 15px;
+
+    border-left: 4px solid var(--azul);
+
+    background-color: var(--cinza-claro);
+
+    font-size: 0.9rem;
+}
+
+.nota-pesquisa i {
+    color: var(--azul);
+
+    margin-right: 5px;
+}
+
+
+/* ==================================================
+   CONCLUSÃO
+================================================== */
+
+.conclusao {
+    margin-top: 20px;
+
+    font-size: 0.95rem;
+}
+
+/* ==================================================
+   RECURSOS
+================================================== */
+
+.recurso h3 {
+    font-size: 1.1rem !important;
+}
+
+
+.recurso h3 i {
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   DISCIPLINAS
+================================================== */
+
+.disciplinas-sobre {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+
+.disciplinas-sobre a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--cinza-claro);
+    color: var(--texto);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+
+.disciplinas-sobre a:hover {
+    background-color: #e5e5e5;
+
+    color: var(--azul-escuro);
+}
+
+
+.disciplinas-sobre a div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.disciplinas-sobre a i {
+    color: var(--azul);
+}
+
+
+.disciplinas-sobre a > span {
+    color: var(--azul);
+
+    font-size: 0.85rem;
+
+    white-space: nowrap;
+}
 
 footer {
 
@@ -250,11 +481,13 @@ footer p {
     margin: 5px 0;
 }
 
-/* MEDIA QUIERIE */
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 700px) {
 
-    /* HEADER */
+     /* HEADER */
 
     header {
         padding: 10px 15px;
@@ -279,78 +512,133 @@ footer p {
     }
 
     nav i {
-        font-size: 13px;
+    font-size: 13px;
     }
+
+    /* Menu temporário para celular */
 
     nav .menu-pc {
         display: none;
-        text-size-adjust: 1px;
+    }
+
+    nav .menu-mobile {
+        display: block;
     }
 
     nav button {
 
-        display: block;
-        border: none;
-        background: transparent;
-        color: var(--branco);
-        font-size: 1.6rem;
-        cursor: pointer;
-        padding: 2px;
+    border: none;
+    background-color: transparent;
+    color: var(--branco);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 2px;
+    }
+
+     /* MAIN */
+
+    main {
+        width: 94%;
+        margin: 0 auto;
     }
 
     .sobre-container {
-
         width: 94%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+
         margin: 20px auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
     }
 
-    .sobre-introducao {
 
+    .sobre-introducao {
         position: static;
+
         width: 100%;
     }
 
-    .sobre-logo {
-        width: 100px;
-        height: 100px;
-    }
 
     .sobre-ficha {
-
         padding: 30px 20px;
     }
 
-    .sobre-ficha h1 {
 
-        font-size: 1.8rem;
+    .sobre-imagem {
+        width: 100px;
+        height: 100px;
+
+        margin-bottom: 20px;
     }
 
+
+    .sobre-ficha h1 {
+        font-size: 1.7rem;
+    }
+
+
     .sobre-ficha p {
+        font-size: 0.95rem;
+    }
+
+
+    .sobre-informacoes {
+        width: 100%;
+    }
+
+
+    .sobre-informacoes summary {
+        padding: 17px;
 
         font-size: 0.95rem;
     }
 
-    .sobre-informacoes {
 
-        width: 100%;
+    .conteudo-details {
+        padding: 5px 18px 20px;
+
+        font-size: 0.93rem;
     }
 
-    .sobre-informacoes summary {
 
-        padding: 17px;
-        font-size: 1rem;
+    .conteudo-details article h3 {
+        font-size: 0.95rem;
     }
 
-    /* FOOTER */
+
+    .disciplinas-sobre a {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}
+
+ /* FOOTER */
 
     footer {
         padding: 20px 15px;
     }
 
+/* ==================================================
+   DESKTOP - BOTÃO MOBILE
+================================================== */
+
+.menu-mobile {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: inherit; 
 }
-
-
-

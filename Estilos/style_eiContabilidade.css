@@ -521,7 +521,7 @@ img {
 
 @media (max-width: 700px) {
 
-    /* HEADER */
+      /* HEADER */
 
     header {
         padding: 10px 15px;
@@ -539,8 +539,6 @@ img {
         height: 35px;
     }
 
-    /* Esconder elementos secundários no celular */
-
     nav {
         display: flex;
         align-items: center;
@@ -550,20 +548,25 @@ img {
     nav i {
     font-size: 13px;
     }
-    
+
+    /* Menu temporário para celular */
+
     nav .menu-pc {
         display: none;
     }
 
+    nav .menu-mobile {
+        display: block;
+    }
+
     nav button {
 
-        display: block;
-        border: none;
-        background: transparent;
-        color: var(--branco);
-        font-size: 1.6rem;
-        cursor: pointer;
-        padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: var(--branco);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
     }
 
     /* MAIN */
@@ -586,7 +589,6 @@ img {
     .hero p {
         font-size: 1rem;
     }
-
 
     /* CAIXAS */
     .ia,
@@ -636,6 +638,16 @@ img {
         font-size: 16px;
     }
 
+    /* Menu temporário para celular */
+
+    nav .menu-pc {
+        display: none;
+    }
+
+    nav .menu-mobile {
+        display: block;
+    }
+
     /* FOOTER */
 
     footer {
@@ -643,6 +655,21 @@ img {
     }
 
 }
+
+ .menu-mobile {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: inherit; 
+}
+
 
 
 
